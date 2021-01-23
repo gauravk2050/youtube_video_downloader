@@ -1,5 +1,6 @@
 from pytube import YouTube
 from time import sleep
+
 def Main():
     ans='y'
     while ans=='y':
@@ -14,10 +15,12 @@ def Main():
         else:
             exit(0)
         ans = input('Enter y to continue..')
+        
 def inp():
     st = input('Enter you Link')
     y = YouTube(st)
     return y
+
 def details(yt):
     print('Details:\n')
     print('Title: ',yt.title)
@@ -28,6 +31,7 @@ def details(yt):
     print('Views: ',yt.views)
     print('Age Restriction: ',yt.age_restricted)
     print('ID: ',yt.video_id)
+    
 def stream(t):
     s=t.streams
     a='y'
@@ -48,6 +52,7 @@ def stream(t):
         else:
             print('Wrong Input')
         a=input('Enter y To Stream Again')
+        
 def down(yt):
     title = yt.title
     c=int(input("   1.Video\n   2.Audio"))
